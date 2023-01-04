@@ -332,7 +332,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
         self.update_view()
         await interaction.response.edit_message(**self.send_kwargs)
 
-    @ui.button(label="1", style=discord.ButtonStyle.success,emoji="<:next_last:1060080694707105802>")
+    @ui.button(style=discord.ButtonStyle.success,emoji="<:next_last:1060080694707105802>")
     async def button_last(self, a: MaybeButton['PaginatorInterface'], b: MaybeButton['PaginatorInterface']):  # pylint: disable=unused-argument
         """Button to send interface to last page"""
 
