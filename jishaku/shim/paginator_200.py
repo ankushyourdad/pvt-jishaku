@@ -185,7 +185,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
         self.button_current.label = str(self.display_page + 1)
         self.button_next.label = str(self.emojis.forward)
         self.button_last.label = f"{self.emojis.end} \u200b {self.page_count}"
-        self.button_close.label = f"{self.emojis.close} \u200b Close paginator"
+        self.button_close.label = f"{self.emojis.close}"
 
     async def add_line(self, *args: typing.Any, **kwargs: typing.Any):
         """
