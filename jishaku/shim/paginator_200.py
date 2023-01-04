@@ -180,12 +180,12 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
         This is used internally.
         """
 
-        self.button_start.label = f"1 \u200b {self.emojis.start}"
-        self.button_previous.label = str(self.emojis.back)
+        self.button_start.emoji = f"{self.emojis.start}"
+        self.button_previous.emoji = str(self.emojis.back)
         self.button_current.label = str(self.display_page + 1)
-        self.button_next.label = str(self.emojis.forward)
-        self.button_last.label = f"{self.emojis.end} \u200b {self.page_count}"
-        self.button_close.label = f"{self.emojis.close}"
+        self.button_next.emoji = str(self.emojis.forward)
+        self.button_last.emoji = f"{self.emojis.end}"
+        self.button_close.emoji = f"{self.emojis.close}"
 
     async def add_line(self, *args: typing.Any, **kwargs: typing.Any):
         """
