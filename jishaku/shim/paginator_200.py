@@ -293,7 +293,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
         interaction: discord.Interaction
         return not self.owner or interaction.user.id == self.owner.id
 
-    @ui.button(label="<:previous_last:1060080704874098688>", style=discord.ButtonStyle.success)
+    @ui.button(emoji="<:previous_last:1060080704874098688>", style=discord.ButtonStyle.success)
     async def button_start(self, a: MaybeButton['PaginatorInterface'], b: MaybeButton['PaginatorInterface']):  # pylint: disable=unused-argument
         """Button to send interface to first page"""
 
@@ -303,7 +303,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
         self.update_view()
         await interaction.response.edit_message(**self.send_kwargs)
 
-    @ui.button(label="\N<:previous:1060079286859599933>", style=discord.ButtonStyle.success)
+    @ui.button(emoji="<:previous:1060079286859599933>", style=discord.ButtonStyle.success)
     async def button_previous(self, a: MaybeButton['PaginatorInterface'], b: MaybeButton['PaginatorInterface']):  # pylint: disable=unused-argument
         """Button to send interface to previous page"""
 
@@ -322,7 +322,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
         self.update_view()
         await interaction.response.edit_message(**self.send_kwargs)
 
-    @ui.button(label="\N<:next:1060079422503387246>", style=discord.ButtonStyle.success)
+    @ui.button(emoji="<:next:1060079422503387246>", style=discord.ButtonStyle.success)
     async def button_next(self, a: MaybeButton['PaginatorInterface'], b: MaybeButton['PaginatorInterface']):  # pylint: disable=unused-argument
         """Button to send interface to next page"""
 
@@ -332,7 +332,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
         self.update_view()
         await interaction.response.edit_message(**self.send_kwargs)
 
-    @ui.button(label="\N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR} \u200b 1", style=discord.ButtonStyle.success)
+    @ui.button(lebel="1", style=discord.ButtonStyle.success,emoji="<:next_last:1060080694707105802>")
     async def button_last(self, a: MaybeButton['PaginatorInterface'], b: MaybeButton['PaginatorInterface']):  # pylint: disable=unused-argument
         """Button to send interface to last page"""
 
@@ -370,7 +370,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
                     self.interface.update_view()
                     await interaction.response.edit_message(**self.interface.send_kwargs)
 
-        @ui.button(label="\N<:pages:1060086884367356005>", style=discord.ButtonStyle.primary)
+        @ui.button(emoji="<:pages:1060086884367356005>", style=discord.ButtonStyle.primary)
         async def button_goto(self, a: MaybeButton['PaginatorInterface'], b: MaybeButton['PaginatorInterface']):  # pylint: disable=unused-argument
             """Button to jump directly to a page"""
 
@@ -378,7 +378,7 @@ class PaginatorInterface(ui.View):  # pylint: disable=too-many-instance-attribut
 
             await interaction.response.send_modal(self.PageChangeModal(self))
 
-    @ui.button(label="\N<:stop:1060083234215559222>", style=discord.ButtonStyle.danger)
+    @ui.button(emoji="<:stop:1060083234215559222>", style=discord.ButtonStyle.danger)
     async def button_close(self, a: MaybeButton['PaginatorInterface'], b: MaybeButton['PaginatorInterface']):  # pylint: disable=unused-argument
         """Button to close the interface"""
 
