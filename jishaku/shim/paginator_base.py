@@ -33,9 +33,9 @@ class EmojiSettings(typing.NamedTuple):
 
 
 EMOJI_DEFAULT = EmojiSettings(
-    start="\N{BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}",
-    back="\N{BLACK LEFT-POINTING TRIANGLE}",
-    forward="\N{BLACK RIGHT-POINTING TRIANGLE}",
-    end="\N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}",
-    close="\N{BLACK SQUARE FOR STOP}",
+    start="<:previous_last:1060080704874098688>",
+    back="<:previous:1060079286859599933>",
+    forward=<:next:1060079422503387246>",
+    end="<:next_last:1060080694707105802>}",
+    close="<:stop:1060083234215559222>",
 )
